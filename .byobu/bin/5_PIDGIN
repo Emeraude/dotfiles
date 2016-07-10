@@ -1,0 +1,7 @@
+#!/bin/bash
+
+id=$(xwininfo -tree -root| grep '\[.*\].*pidgin' -i | cut -d 'x' -f2 | cut -d ' ' -f1);
+[ -n "$id" ] && {
+    msg=$(xprop -id '0x'$id _PIDGIN_UNSEEN_COUNT | cut -d ' ' -f3);
+    echo '['$msg']';
+}
