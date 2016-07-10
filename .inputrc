@@ -1,0 +1,22 @@
+set bell-style none
+set completion-ignore-case on
+set colored-stats on
+set show-all-if-ambiguous on
+
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+"\ep": '\C-p\n' # re-execute previous command
+
+$if Bash
+	"\es": '\C-asudo \C-e'
+	"\em": '\C-aman \ef\C-k\n'
+	"\ec": '\C-abc -liq <<< "\C-e"\n'
+$endif
+
+$if Mysql
+	"\es": '\C-aSELECT * FROM \C-e'
+	"\ed": '\C-aDESC \ef'
+	"\el": '\C-A\C-kSHOW TABLES;\n'
+	"\ec": '\C-aSELECT COUNT(*) FROM \C-e'
+$endif
