@@ -1,0 +1,14 @@
+[user]
+	name = Thibaut Broggi
+	email = broggi_t@epitech.eu
+[push]
+	default = simple
+[color]
+	ui = auto
+[pager]
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	show = diff-so-fancy | less --tabs=1,5 -RFX
+[core]
+	excludesfile = ~/.gitignore
+[commit]
+	gpgsign = true
