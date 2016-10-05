@@ -1,4 +1,4 @@
-#!//usr/bin/env bash
+#!/usr/bin/env bash
 
 __job_control() {
     [ -n "`jobs -p`" ] && echo -n '[\[\e[35m\]\j\[\e[0m\]]';

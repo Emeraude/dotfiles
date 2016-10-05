@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 id=$(xwininfo -tree -root| grep '\[.*\].*pidgin' -i | cut -d 'x' -f2 | cut -d ' ' -f1);
 [ -n "$id" ] && {
