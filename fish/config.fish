@@ -1,6 +1,6 @@
-function ne
-  emacs -nw $argv
-end
+alias ne='emacs -nw'
+alias ip='ip -c'
+alias efm='enlightenment_filemanager'
 
 set -x TERM xterm-256color
 set -x EDITOR 'emacs -nw'
